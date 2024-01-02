@@ -1,3 +1,3 @@
 # Sociumtech_Tasks
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWuef-TaC1q9qhtmvaDl3irEvle0LWdX6ln1eYeVBwA7nKS4rwws99yN_11rSxjid5LVg&usqp=CAU)
+![](https://media.licdn.com/dms/image/D4E3DAQFTa_lt92-Sow/image-scale_191_1128/0/1694330581149/sociumtech_cover?e=2147483647&v=beta&t=RJZE_SEH7F_HgsVzPv0NWS0epDiy5bTQc3oaQYDmHj0)
