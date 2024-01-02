@@ -1,0 +1,197 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,600;0,700;1,200;1,300;1,500;1,600&family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400&family=Varela+Round&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500;1,600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,600;0,700;1,200;1,300;1,500;1,600&family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400&family=Style+Script&family=Varela+Round&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500;1,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+ 
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #8b7c60;
+  font-family: 'Style Script', 'cursive';}
+
+p{
+  font-weight: bold;
+  font-size: xxx-large;
+  top: 63px;
+  position: absolute;
+  text-shadow: 4px 0px #fff;
+  animation: title 1.5s linear infinite;
+
+}
+
+.container{
+  position: relative;
+  top: 50px;
+  font-family: 'Dancing Script';
+
+}
+
+
+.cup{
+  position: relative;
+  width: 280px;
+  height: 300px;
+  background: linear-gradient(to right, #2e2c2c, #000000);
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+}
+
+.top{
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to right, #3a3535, #000000);
+border-radius: 50%;
+}
+
+.circule{
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: 50px;
+
+  background: linear-gradient(to left, #0c0a0a, #888787);
+border-radius: 50%;
+box-sizing: border-box;
+overflow: hidden;
+}
+
+
+.tea{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#3d1f14, #e28462);
+  border-radius: 50%;
+
+}
+
+
+.handle{
+
+  position: absolute;
+  right: -70px;
+  top: 40px;
+  width: 160px;
+  height: 180px;
+  border: 25px solid #070707;
+  border-left: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+border-radius: 50%;
+transform: rotate(42deg);
+}
+
+.plate{
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 200px;
+  background: linear-gradient(to right, #000000, #000000);
+  border-radius: 50%;
+  box-shadow:0 35px 35px rgba(0,0,0);
+}
+
+.plate::before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  background: linear-gradient(to left, #2c2525, #000000);
+
+}
+
+.plate::after{
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  background: radial-gradient(rgba(0,0,0) 39%, transparent, transparent);
+
+}
+
+.vapour{
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.vapour span{
+  position: relative;
+  bottom: 50px;
+  display: block;
+  margin: 0 2px 50px;
+  min-width: 8px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  opacity: 0;
+  filter: blur(8px);
+  animation-delay: calc(var(--i) * -0.5s);
+}
+
+@keyframes animate {
+  
+  0%{
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+
+  15%{
+    opacity: 1;
+  }
+  50%{
+    transform: translateY(-150px) scaleX(5);
+  }
+
+  95%{
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(-300px) scaleX(10);
+  }
+  
+}
+
+@keyframes title {
+
+  0%{
+
+    transform: translateY(0);
+  }
+
+  50%{
+
+    transform: translateY(10px);
+
+  }
+
+  100%{
+    transform: translateY(0)  scale(1);
+
+  }
+}
