@@ -1,0 +1,121 @@
+/* 1-  General Css Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* css3 feature, to don't let margin, padding & border affect on the width/height of the element
+    (it will  take form them)*/
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    /* Make it in the center of the screen*/
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*=================================================================================================*/
+
+.pass-window {
+    width: 1440px;
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pass-window-title {
+
+    width: 926px;
+    height: 76px;
+    color: #00519D;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 20px;
+
+}
+
+
+
+.display {
+    border: 1px solid #FF6700;
+    width: 688px;
+    height: 75px;
+    margin: 30px 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+
+}
+
+
+.display input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    color: #ACACAC;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+
+
+}
+
+.display i {
+
+    cursor: pointer;
+}
+
+.generate-btn {
+    width: 370px;
+    height: 75px;
+    color: #FFF;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: #FF6700;
+    border: 1px solid #FF6700;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.generate-btn:hover {
+    cursor: pointer;
+}
+
+
+
+/*============================================= Responsive Part ========================================================*/
+
+@media (max-width: 650px) {
+    .pass-window {
+      width: 100%; 
+      height: auto; /* Allow the height to adjust based on content */
+    }
+  
+    .pass-window-title {
+      width: 70%; /* Make the title span the full width */
+      font-size: 32px; 
+    }
+  
+    .display {
+      width: 100%; 
+    }
+  
+    .generate-btn {
+      width: 100%;
+    }
+  }
+  

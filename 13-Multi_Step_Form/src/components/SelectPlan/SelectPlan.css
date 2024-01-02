@@ -1,0 +1,117 @@
+
+.Billings{
+    display: flex;
+    gap: 20px;
+   
+  
+  }
+
+  
+.toggle-bill {
+    width: 60%;
+    text-align: center;
+    background-color: rgba(239, 241, 247, 0.9);
+    height: 60px;
+    padding: 25px 0;
+    margin: 50px auto;
+    border-radius: 8px;
+    color: hsl(231, 11%, 63%);
+  }
+  
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+    margin: 0 9px;
+  
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: -10px;
+    left: 0;
+    right: 0;
+    bottom: 9px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  
+  input:checked + .slider {
+    background-color: hsl(213, 96%, 18%);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px hsl(213, 96%, 18%)  ;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(46px);
+    -ms-transform: translateX(46px);
+    transform: translateX(46px);
+  }
+  
+
+
+
+
+  @media only screen and (max-width: 1024px) and (min-width: 730px) {
+
+              .Billings{
+                gap: 10px;
+              }
+
+
+              .toggle-bill {
+                width: 90%;
+           margin: 50px auto 70px auto;
+              }
+  }
+    
+    
+  
+  @media only screen and (max-width: 729px) and (min-width: 320px) {
+
+    .Billings{
+     flex-direction: column;
+    }
+
+    .toggle-bill {
+     
+      padding:  0;
+      margin: 15px auto;
+      padding: 20px 0;
+     
+    }
+   
+
+    }

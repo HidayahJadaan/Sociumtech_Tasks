@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  content: "";
+  position: absolute;
+}
+
+body {
+  overflow: hidden;
+}
+
+input {
+  height: 400px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.toggle-wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.toggle-wrapper .toggle {
+  transform: translate(-40px, 40px);
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+}
+
+label.toggle-item {
+  width: 7em;
+  /* background: #2e394d; */
+  height: 3em;
+  display: inline-block;
+  border-radius: 50px;
+  margin: 90px;
+  position: absolute;
+  transition: all 0.3s ease;
+  transform-origin: 20% center;
+  cursor: pointer;
+  top: 100px;
+  left: -180px;
+}
+
+.basketball-hoop label {
+  /* background: #fdb827; */
+  height: 60px;
+  width: 150px;
+}
+
+.basketball-hoop label:before {
+  content: none;
+}
+
+.basketball-hoop .ball {
+  border-radius: 50%;
+  width: 6.5em;
+  height: 6.5em;
+  position: absolute;
+  border: 2px solid black;
+  transition: 0.4s ease;
+  top: 2px;
+  left: 0;
+  background-image: url("./imgs/ball.png");
+}
+
+.ball img {
+  width: 100%;
+  height: 100%;
+}
+
+.ball_wrapper {
+  width: 100px;
+}
+
+.basketball-hoop .ball_wrapper {
+  transition: 0.4s ease;
+  width: 195%;
+  height: 200%;
+  transform-origin: 50% -2%;
+}
+
+.basketball-hoop .hoop {
+  top: -680px;
+  right: -10px;
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  /* border: 1px solid red; */
+}
+
+.basketball-hoop .hoop img {
+  width: 100%;
+}
+
+#hoop:checked + label {
+  /* background-color: #542583; */
+  transition-delay: 1.35s;
+}
+
+#hoop:checked + label .ball_wrapper {
+  animation: 1.5s linear ball-wrapper forwards;
+}
+
+#hoop:checked + label .ball {
+  animation: 1.5s linear ball forwards;
+}
+
+.line {
+  border-left: 10px solid #00519d;
+  height: 412px;
+  position: absolute;
+  top: -438px;
+  left: 29px;
+}
+
+.footer {
+  background: #00519d;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  height: 130px;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes ball {
+  0% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-700px) scale(0.2);
+  }
+
+  48% {
+    transform: translateY(-700px) scale(0.2);
+  }
+
+  52% {
+    transform: translateY(-600px) scale(0.5);
+  }
+
+  56% {
+    transform: translateY(-425px) scale(0.5);
+  }
+
+  60% {
+    transform: translateY(-150px) scale(0.5);
+  }
+
+  65% {
+    transform: translateY(-450px);
+  }
+
+  70% {
+    transform: translateY(-450px);
+  }
+
+  75% {
+    transform: translateY(-30px, 91px);
+  }
+
+  80% {
+    transform: translateY(-45px, 88px);
+  }
+
+  85% {
+    transform: translateY(-40px, 91px);
+  }
+
+  90% {
+    transform: translateY(-45px);
+  }
+
+  95% {
+    transform: translateY(-80px);
+  }
+
+  100% {
+    transform: translateY(-80px);
+  }
+
+
+
+}
+
+@keyframes ball-wrapper {
+  0% {
+    transform: translateY(-200px);
+  }
+
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+}

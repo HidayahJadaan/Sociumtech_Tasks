@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,600;0,700;1,200;1,300;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&family=Varela+Round&family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+    <!-- ============================================= Initial Window ============================================================ -->
+    <!-- ============================================= Initial Window ============================================================ -->
+
+
+
+    <div id="choices">
+        <h2 class="Big-title">Choose:</h2>
+
+
+        <div class="choice-item" id="rock">
+
+            <div class="img-container">
+                <img src="rock.svg" alt="Rock" onclick="Game('rock')">
+            </div> <!-- ./img-container -->
+            <h2 class="img-title">Rock</h2>
+        </div> <!-- ./choice-item-->
+        <!-- ========================================================================================================= -->
+
+        <div class="choice-item" id="paper">
+            <div class="img-container">
+                <img src="paper.svg" alt="Paper" onclick="Game('paper')">
+
+            </div> <!-- ./img-container -->
+
+            <h2 class="img-title"> Paper</h2>
+        </div> <!-- ./choice-item-->
+
+        <!-- ========================================================================================================= -->
+
+        <div class="choice-item" id="scissor">
+            <div class="img-container">
+                <img src="scissors.svg" alt="Scissors" onclick="Game('scissors')">
+            </div> <!-- ./img-container -->
+            <h2 class="img-title">Scissor</h2>
+        </div> <!-- ./choice-item-->
+
+    </div> <!--./ choices-->
+
+
+    <!-- ============================================== Game Window ========================================================== -->
+    <!-- ============================================== Game Window ========================================================== -->
+    <div class="Game-Window">
+        <img id="your-choice">
+
+        <div class="result-container">
+            <h2 id="result" class="result-message"></h2>
+        </div> <!--./result-container-->
+
+        <img id="computer-choice">
+    </div> <!-- ./Game-Window-->
+
+
+    <button id="play-again" onclick="resetGame()">Play Again</button>
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

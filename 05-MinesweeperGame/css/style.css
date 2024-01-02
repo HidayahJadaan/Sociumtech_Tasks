@@ -1,0 +1,139 @@
+/* 1-  General Css Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* css3 feature, to don't let margin, padding & border affect on the width/height of the element
+    (it will  take form them)*/
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif , sans-serif;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    background-image: linear-gradient(to bottom right,#FF512F,#FFBD6F,#5761B2, #1FC5A8, #FE9090,#DD2476);
+}
+
+.container{
+
+    position: absolute;
+    left: 50%;
+    top: 20%;
+
+    transform: translate(-50%,0%);
+
+}
+
+h1{
+    margin-top: 50px;
+}
+
+/*=================================================================================================*/
+#board{
+    width:482px;
+    height: 482px;
+    border: 7px solid #000;
+    background-color: #C0C0C0;
+    margin: 60px auto;
+    border-radius: 7px;
+    display: flex;/* We want the tile to display from left to right every row downm but if we didn't have this it's gonna display all in a single column*/
+    flex-wrap: wrap;
+
+    
+}
+
+#board div{
+    width: 52px;
+    height: 52px;
+    border: 1px solid #2e2d2d; /* 2px extra*/
+
+    /*Text      ===> Inside each tile*/ 
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* H */
+    align-items: center; /* V */
+    cursor: pointer;
+
+}
+
+.tile-clicked{
+    background-color: #fff;
+}
+
+.num1{
+    background-color: #FF8C00;
+
+}
+
+.num2{
+    background-color: #5761B2;
+
+}
+
+.num3{
+    background-color: #DD2476;
+
+}
+
+#flag-button{
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    background-color: #FFA07A;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* Style For My Own Alert Message Box Screen*/
+.my-alert {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /*Alert Box Content */
+  .my-alert-content {
+    background-color: #fff;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  .my-alert-content p{
+
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  #play-again-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #DD2476;
+    color: #000;
+    border: 2px solid #000;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px;
+  }
+
+  
+/*============================================= Responsive Part ========================================================*/

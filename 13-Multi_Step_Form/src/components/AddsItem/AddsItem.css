@@ -1,0 +1,47 @@
+
+.AddsItem{
+    display: flex;
+    gap:20px;
+    margin: 40px 0;
+    border: 1px solid hsl(231, 11%, 63%);
+    padding: 20px;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+  
+  
+  .AddsItem input {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .adds-amount{
+    position: absolute;
+    right: 60px;
+    margin-top: 15px;
+  
+  }
+
+
+
+  @media only screen and (max-width: 1024px) and (min-width: 730px){
+    .AddsItem{
+     flex-direction: column;
+      padding: 7px;
+      font-size: 15px;
+    }
+    .AddsItem h1{
+     
+     font-size: 22px;
+    }
+  }
+  
+  @media only screen and (max-width: 729px) and (min-width: 320px) {
+
+     .AddsItem h1{
+      
+      font-size: 20px;
+     }
+  }
+  

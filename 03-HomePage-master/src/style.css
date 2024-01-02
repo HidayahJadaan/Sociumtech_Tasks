@@ -1,0 +1,1306 @@
+:root {
+  all:unset;
+}
+
+body {
+  font-family: 'Work Sans', 'sans-serif';
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #fff;
+ 
+}
+
+
+
+/*================================================= Start Header ==================================================*/
+.header {
+  padding: 20px;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.header .links {
+  position: relative;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+/* Menu Symbol /*/
+.header .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.header .links .icon span {
+  background-color: #333;
+  margin-bottom: 7px;
+  height: 3px;
+}
+
+#search{
+  width: 70px;
+ height: 70px;
+  position: relative;
+  right:-700px;
+  top: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Menu Symbol */
+.header .links .icon span:first-child {
+  width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.header .links .icon span:last-child {
+  width: 100%;
+}
+
+/* Window */
+.header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  min-width: 400px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 11;
+  color: rgb(0, 0, 38);
+  height: 400px;
+}
+
+
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+   position: absolute;
+  right: 5px;
+  top: -20px;
+}
+
+/* Display Window*/
+.header .links:hover ul {
+  display: block;
+}
+
+.header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: rgb(0, 0, 38);
+  transition: var(--main-duration);
+  margin-bottom: 20px;
+}
+
+.header .links ul li a:hover {
+  padding-left: 25px;
+  color: #FF4500;
+  border-color: #FF4500;
+}
+
+.header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+
+/* End Header */
+
+
+/*============================================ Start Header ProgressBar Section ===============================================*/
+
+.progress_bar .pro-bar {
+  background: hsl(0, 0%, 97%);
+  box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1) inset;
+  height: 4px;
+  margin-bottom: 12px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.progress_bar {
+  color: hsl(218, 4%, 50%);
+  font-size: 15px;
+  font-weight: 300;
+  position: relative;
+  top: -28px;
+  z-index: 1;
+}
+
+.progress_bar .progress-bar-inner {
+  display: block;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 1s linear 0s;
+}
+
+.progress_bar .progress-bar-inner:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: inherit;
+  border-radius: 50%;
+  position: absolute;
+  right: 85px;
+  top: -5px;
+}
+
+/* ============================== End Header ProgressBar Section ============================================== */
+
+/*=============================== Start Header Bachground Section ==============================================*/
+
+
+.header-background {
+  width: 90vw;
+  height: 500px;
+  position: relative;
+}
+
+.gradient_bg, .img_bg
+ {
+
+  width: 94%;
+  height: 80vh;
+  position: absolute;
+  top: 170px;
+  left: -10px;
+  background-color: rgb(0, 0, 38);
+  background-image: linear-gradient(rgb(0, 0, 38), rgb(0, 0, 38), OrangeRed);
+  background-position: center top 10%;
+  border-radius: 27px;
+}
+/*
+.img_bg {
+
+  width: 800px;
+  height: 500px;
+  z-index: 10;
+  background: #FFE4B5;
+  margin: 60px;
+  left: 870px;
+  top: 200px;
+  right: 0;
+}
+.img_bg:hover {
+margin-right: 0;
+left: 1000px;
+  
+}
+*/
+
+.header-container-img img{
+
+  position: relative;
+  width: 800px;
+  height: 450px;
+  overflow: hidden; /* Hide any content that overflows the container */
+  border-radius: 19px;
+  top: 150px;
+
+}
+.header-container-img{
+  position: absolute;
+  width: 900px; /* Adjust the width to control the bleed width */
+  right:10px; /* Adjust the value to control the initial bleed amount */
+  transform: translateX(0);
+  transition: transform 1s ease-out; /* Add a smooth transition */
+}
+
+
+
+
+
+/*=============================================== End Header Bachground Section ========================================================================*/
+
+
+/*=============================================== Start Header Text Section  ===========================================================================*/
+
+.Header-txt {
+
+  position: relative;
+
+}
+
+.Header-title {
+  font-weight: 500;
+  font-size: 70px;
+  margin: 25px 0 25px 0;
+}
+
+.txt-block {
+  position: absolute;
+  top: 100px;
+  left: 110px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.txt-block p {
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.Header-btn {
+  width: 300px;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background-image: url('../images/arrow'), url('../images/small_progress');
+  background-repeat: no-repeat no-repeat;
+  background-position: center right, center left;
+  padding: 25px 30px 25px 30px;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  filter: invert(1);
+  cursor: pointer;
+
+}
+
+
+.Header-content b {
+  font-weight: bolder;
+}
+
+/*
+.Header-btn img{
+  filter: invert(100%);
+}*/
+
+/* End Header Text Section*/
+
+/*=======================================================================================================================*/
+
+
+
+/* Header Progress Bar */
+
+/* Flexbox styling for arranging items */
+.stepper-wrapper {
+  margin-top: auto;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* Styling for the entire progress bar */
+.progress_bar_second {
+  color: #000;
+  font-size: 15px;
+  font-weight: 300;
+  position: relative;
+  top: 690px;
+  left: 0;
+  z-index: 1;
+
+}
+
+/* Styling for each step item in the progress bar */
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  flex: 1;
+
+}
+
+/* Styling for the step counter (circule) inside each step item */
+/* step content */
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+
+  font-weight: bold;
+}
+
+/* dots positions on the line*/
+.step-counter {
+  position: relative;
+  left: -450px;
+  top: -50px;
+
+}
+
+/* Styling for the completed steps (white bar after completed items) */
+/* White Bar*/
+.completed::after {
+  position: relative;
+  content: "";
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  top: -60px;
+  left: -740px;
+  z-index: 3;
+  padding: 0;
+}
+
+/*It allows you to add extra content to an element without modifying the actual 
+  content in the HTML markup. The ::after pseudo-element is often used for decorative purposes,
+   such as adding icons, borders, or other visual elements.*/
+
+
+/* Header Progress Bar */
+
+/* Gray Finger Img*/
+.gray-finger {
+  position: relative;
+  right: -1100px;
+  top: 70px;
+  z-index: 5;
+  filter: contrast(0%);
+}
+
+
+/*==================================================================================================================*/
+
+/*  Start Body Content */
+
+.card-item {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.card-item>div {
+  background-color: transparent;
+  margin: 10px 90px 10px 90px;
+  padding: 20px;
+  width: 50%;
+  height: 40vh;
+
+}
+
+.section1,
+.section2 {
+
+  margin-bottom: 60px;
+}
+
+.card-content {
+  text-align: justify;
+  font-size: 15px;
+  margin:0;
+}
+
+.card-content h5 {
+  margin: 0 0 60px 0;
+  font-size: 49px;
+  font-weight: 400;
+  padding: 0;
+  color: rgb(0, 0, 38);
+}
+
+
+.ScrollPanel ul {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #333;
+  background-color: rgba(229, 228, 226, 0.22);
+  overflow: auto;
+  text-align: left;
+  padding: 0;
+  border-radius: 15px;
+  border-color: transparent;
+  overflow-x: hidden;
+
+}
+
+
+.item {
+  width: 90%;
+  padding: 20px;
+  color: #343434;
+  background: transparent;
+  margin: 10px;
+  list-style: none;
+  border-radius: 5px;
+  border-color: transparent;
+  font-size: 20px;
+  font-weight: 500;
+
+}
+
+
+
+.item:hover {
+  border: 2px solid orangered;
+  color: orangeRed;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.4);
+
+}
+
+/*================================================= 5X Section ===================================================================*/
+.body-btn {
+  width: 310px;
+  background-color: transparent;
+  border: 1px solid #343434;
+  border-radius: 15px;
+  background-image: url('../images/arrow'), url('../images/small_progress');
+  background-repeat: no-repeat no-repeat;
+  background-position: center right, center left;
+  padding: 20px 25px 20px 25px;
+  margin-top: 20px;
+  color: #343434;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.section2 {
+
+  margin-bottom: 70px;
+}
+
+.containerr img {
+  position: relative;
+  width: 850px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 19px;
+
+}
+
+.containerr {
+  position: relative;
+  width: 900px; /* Adjust the width to control the bleed width */
+  top: 30px;
+  transform: translateX(0);
+  transition: transform 1s ease-out; /* Add a smooth transition */
+right: 1000px;
+  
+}
+
+
+
+/*
+.Group22Img:hover{
+position: relative;
+left: -110px;
+  margin-left: 0;
+  width: 100%;
+}
+*/
+#X5 {
+  width: 800px;
+  height: 500px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 20px 20px;
+  margin: 0px 90px 10px 40px;
+  font-size: medium;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.X5 {
+  font-size: 300px;
+  color: #FF4500;
+
+}
+
+.X5-title {
+  font-size: 70px;
+  font-weight: 500;
+  color: #FF4500;
+  padding: 20px;
+
+}
+
+/*  End Body Content */
+
+
+/*=============================================== Big Qoute Section ========================================================================*/
+
+
+/* Qoute Section*/
+
+.qouteSection{
+
+  display: flex;
+  flex-direction: row;
+}
+
+.brooBar{
+  margin-bottom: 70px;
+}
+
+.qoute-txt {
+  width: auto;
+  height: 400px;
+  background-color: transparent;
+  margin: 50px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 140px;
+  color: rgb(0, 0, 80);
+
+}
+
+#one {
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.qoute-txt h4 {
+  font-size: 90px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.qoute-txt p {
+  text-align: justify;
+
+}
+
+/*=============================================== 4 ID's Section ========================================================================*/
+
+
+#firstID {
+
+  display: flex;
+  height: fit-content;
+  width: max-content;
+  margin: 10px 0;
+
+}
+
+.Id-txt {
+  padding: 20px;
+  margin: 0;
+
+}
+
+.Id-txt h4 {
+  margin: 0;
+  font-size: 35px;
+
+}
+
+.ThirdBody button {
+  position: relative;
+  left: 700px;
+}
+
+.Orange-finger {
+
+    position: relative;
+  left: -400px;
+  top: -800px;
+  
+  transform: rotate(20deg);
+  z-index: 20;
+
+}
+/*=============================================== About Section ========================================================================*/
+
+.Group {
+  background-color: rgba(220, 220, 220, 0.3);
+  width: 100%;
+  height: 300px;
+  display: flex;
+  padding: 70px;
+  border-radius: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  left: 200px;
+  top: 90px;
+}
+
+.Group-txt {
+
+  width: 800px;
+
+}
+
+.Group-txt .body-btn {
+  cursor: pointer;
+
+}
+
+.GroupImg {
+  position: relative;
+  left: 100px;
+  top: -150px;
+}
+
+.Id-txt2 {
+  padding: 20px;
+  margin: 0;
+  width: 500px;
+  margin: -50px 60px;
+}
+
+/*=============================================== Qoute Section ========================================================================*/
+
+.qouteSection{
+
+  position: relative;
+  top: -600px;
+}
+
+.stepper-wrapper2 {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+position: relative;
+top: -800px;
+}
+
+.stepper-item2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex:1;
+  
+
+ 
+}
+
+.stepper-item2 .step-counter2 {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #FF4500;
+  margin-bottom: 4px;
+  color: #fff;
+  font-weight:bold;
+}
+
+
+.stepper-item2.completed2 .step-counter2 {
+  background-color: #FF4500;
+}
+.step-counter2 {
+  position: relative;
+  left: -153px;
+  top: -5px;
+
+}
+.completed2::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #FF4500;
+  width: 400%;
+  top: 7.5px;
+  left: -50%;
+  z-index: 3;
+}
+
+
+
+/*=============================================== Footer Section ========================================================================*/
+.footer{
+  
+  background: linear-gradient(to left, OrangeRed, rgb(0, 0, 38), rgb(0, 0, 38));
+  border-color: #000;
+  }
+
+.footer-container {
+  height: 710px;
+  margin-top: 10%;
+  background:  rgb(0, 0, 38);
+  background:linear-gradient( to right, rgb(0, 0, 38),rgb(0, 0, 38), OrangeRed );
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.foot-container{
+  width: 50%;
+ 
+  height: 590px;
+}  
+.Form{
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 69%;
+ 
+   color: #000;
+filter: invert(1);
+  padding: 50px 40px;
+
+  padding-left: 80px;
+  padding-right: 0;
+  padding-bottom: 70px;
+  border: 0.2px solid #333;
+  border-radius: 19px;
+  position: relative;
+  left: -20px;
+  top: 90px;
+}
+.Form h1{
+  font-weight: 400;
+  font-size: 42px;
+  margin: 25px 0 25px 0;
+  color: #000;
+  line-height: 3rem;
+  
+}
+.Form input{
+  padding: 20px 20px 20px 0;
+  border:0.2px solid #333;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 80%;
+  color: #333;
+  
+  margin-bottom: 40px;
+  font-size: 19px;
+  font-weight: lighter;
+}
+
+.SignUp{
+  width: 210px;
+  background-color: transparent;
+  border: 1px solid#fff;
+  border-radius: 22px;
+  background-image: url('../images/arrow'), url('../images/small_progress');
+  background-repeat: no-repeat no-repeat;
+  background-position: center right, center left;
+  padding: 20px 25px 20px 25px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  filter: invert(50%);
+}
+.bottom-content{
+  
+  height: 590px;
+
+}
+
+.RightPart
+{
+  display: flex;
+  padding-top: 5%;
+  
+}
+ .bottom-list{
+ 
+  height: 304px;
+  width: 53%;
+  padding-top: 5%;
+  padding-left: 5%;
+  color: #fff;
+  list-style: none;
+ 
+}
+.bottom-list li{
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+ .Social{
+ 
+  width: 29%;
+  height: 150px;
+  margin-left: 38%;
+  border: 1px solid #fff;
+  border-radius: 5%;
+  border-right: none;
+  display: flex;
+flex-direction: column;
+padding: 40px 20px 40px 20px;
+
+}
+.Social a img{
+  margin-bottom: 20px;
+}
+
+.bottom-content .CopyRight{
+  height: 19%;
+  margin-top: 4%;
+  padding-left: 5%;
+  padding-top: 3%;
+color: white;
+font-size: 93%;
+
+}
+
+/*============================================= Media Query Part ================================================================================*/
+
+@media screen and (max-width:650px){
+  .header{
+ 
+      display: block;
+      position: relative;
+      padding: 15px 20px;
+  
+  }
+
+  .links ul{
+    margin-top: 15px;
+        display: none;
+  }
+  #search{
+    display: block;
+    width: 31px;
+}
+.links ul{
+  position: absolute;
+  top: 100%;
+  right:-100%;
+  width:270px;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10px;
+  transition: all .50s ease;
+  background-color: white;
+}
+
+.gradient_bg{
+
+  position: absolute;
+  top: -11vh;
+  left: -18vw;
+}
+
+.header-backround img{
+  margin-right: 54px;
+  margin-top: 106px;
+}
+.Header-title{
+  font-size: 289%;
+  position: relative;
+  top: -67vh;
+  left: 6vw;
+  width: 78%;
+}
+
+.Header-content{
+     
+  left: 8%;
+  width: 81%;
+  font-size: 92%;
+}
+
+.Header-txt .txt-block button{
+  width: 60%;
+}
+  
+.card-item, .card-content, .card-item{
+padding: 0px;
+margin: 0;
+  flex-direction: column;
+}
+
+}
+
+/*============================================= Media Query Part ================================================================================*/
+
+@media screen and (max-width:450px){
+  body{
+    margin: 0;
+    padding:0;
+  }
+  .header{
+ 
+      display: block;
+      position: relative;
+      padding: 15px 20px;
+  
+  }
+
+  .links ul{
+    margin-top: 15px;
+        display: none;
+  }
+  #search{
+    display: block;
+    width: 31px;
+}
+.links ul{
+  position: absolute;
+  top: 100%;
+  right:-100%;
+  width:270px;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10px;
+  transition: all .50s ease;
+  background-color: white;
+}
+
+.gradient_bg{
+
+  position: relative;
+  top: 20px;
+  left: -70px;
+  width: 100%;
+  height: 600px;
+  margin: 40px 0 0 0;
+}
+
+.header-container-img{
+  padding: 0;
+  top:120px;
+  width: 400px;
+  height: 200px;
+  right: -20px;
+}
+.header-container-img img{
+ position: relative;
+ top: 0;
+ right: -100px;
+ margin: 0;
+ width: 100%;
+ height: 100%;
+
+}
+
+
+.Header-title{
+  font-size: 42px;
+  position: relative;
+  top: -550px;
+  left: -100px;
+  width:300px;
+  height: 200px;
+  
+}
+
+.Header-content{
+  position: relative;
+  top: -570px;
+  left: -100px;
+  font-size: 1px;
+  font-weight: normal;
+  width: 320px;
+}
+
+.Header-txt .txt-block button{
+    position: relative;
+  
+  top: -590px;
+  left: -70px;
+  
+  width: 220px;
+}
+  .progress_bar_second{
+    position: relative;
+
+  top: -605px;
+  left: -70px;
+  }
+  .FirstBody .card-item{
+    display: flex;
+    flex-direction: column;
+  }
+.card-item, .card-content, .card-item{
+position: relative;
+top: -500px;
+flex-direction: column;
+margin: 0;
+}
+
+.FirstBody .card-item .card-content h5{
+  position: relative;
+font-size: 30px;
+font-weight: 500;
+width: 500px;
+left: -90px;
+}
+
+.FirstBody .card-item .card-content .ScrollPanel{
+
+  display: block;
+  width: 400px;
+  position: relative;
+  left: -100px;
+
+}
+
+
+.FirstBody .card-item .card-content .ScrollPanel ul li{
+
+  display: block;
+  width:300px;
+  position: relative;
+  left: 0px;
+
+}
+
+
+#card2-section1{
+
+  display: block;
+  width:300px;
+  position: relative;
+  left: -90px;
+  margin: 0;
+  top: -500px;
+  text-align: left;
+}
+
+.section2{
+  display: flex;
+  flex-direction: column;
+}
+.container{
+  position: relative;
+  top: 600px;
+  width: 300px;
+  height: 300px;
+
+  
+}
+.container img{
+  position: relative;
+
+  width: 400px;
+  top: -450px;
+
+}
+
+#X5{
+  position: relative;
+  top: -300px;
+  margin: 0;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+ 
+ 
+}
+.X5{
+  font-size: 90px;
+  font-weight: 400;
+}
+
+#X5 div{
+  display: flex;
+  flex-direction: column;
+}
+
+#X5 span:last-child {
+  font-size: 19px;
+}
+
+#X5 div .X5-title{
+  font-size: 18px;
+  font-weight: bold;
+  width: 100px;
+  padding-left: 0;
+}
+
+.qoute-txt{
+  position: relative;
+  top: -1040px;
+  text-align: center;
+  font-size: 15px;
+  padding: 0;
+  margin: 20px 0 0 0px;
+
+}
+.qoute-txt h4{
+  font-size: 35px;
+}
+#one{
+  font-size: 20px;
+  margin-left: 10px;
+}
+#two{
+  text-align: left;
+}
+.SecondBody{
+  position: relative;
+  top: -200px;
+  
+}
+.SecondBody .card-content{
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 150px;
+}
+.SecondBody .card-item:first-child{
+  margin: 0;
+  padding: 0;
+}
+
+.ThirdBody{
+  position: relative;
+  top: -200px;
+}
+
+.ThirdBody .card-content{
+  display: flex;
+  flex-direction: row;
+}
+
+.ThirdBody button{
+  position: relative;
+  top: -1000px;
+  left: 50px;
+}
+
+
+.GroupImg img{
+  position: relative;
+  top: -150px;
+  left: -450px;
+   width: 300px;
+  height: 300px;
+}
+.Group{
+  position: relative;
+  top: -800px;
+  left: 50px;
+  margin-left: 0;
+  height: 400px;
+}
+.Orange-finger{
+  position: relative;
+  top: -1900px;
+}
+.qouteSection .card-item{
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  top: -700px;
+  padding: 0;
+  margin: 0;
+  
+}
+
+#init{
+  width: 100px;
+  height: 300px;
+}
+
+.qouteSection .card-item .card-content h5{
+  font-size: 30px;
+  position: relative;
+  top: -520px;
+  left: 0px;
+}
+
+.qouteSection .card-item .card-content{
+  margin-left: 0;
+}
+
+.card-content .progress_bar_second{
+  position: relative;
+  top: 720px;
+  left: -150px;
+}
+.card-content  img{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  
+}
+#secondID{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
+#secondID{
+  position: relative;
+  top: -60px;
+  width: 80px;
+  height: 70px;
+}
+.Id-txt2 {
+  width: 300px;
+position: relative;
+left: 0px;
+}
+
+.footer-container{
+background: linear-gradient(  rgb(0, 0, 38), rgb(0, 0, 38),orangeRed);
+  width:100%;
+  height: 100%;
+  display: block;
+}
+
+.Form{
+  position: relative;
+  left: -10px;
+  width: 350px;
+}
+.RightPart{
+  width: 400px;
+  font-size: medium;
+}
+.RightPart ul {
+  position: relative;
+  left: 10px;
+  margin-top: 90px;
+width: 300vw;
+}
+.RightPart ul li{
+  width: 100%;
+}
+
+.CopyRight{
+  position: relative;
+  bottom: 0;
+  width: 500px;
+  
+
+}
+
+.CopyRight p{
+  font-size: 12.5px;
+}
+.Social{
+  position: relative;
+
+  right: -50px;
+  margin-left: 0;
+  margin-top: 90px;
+}
+}

@@ -1,0 +1,89 @@
+.Item{
+    width: 30%;
+    text-align: left;
+    border: 1px solid hsl(231, 11%, 63%);
+    padding: 20px;
+    border-radius: 10px;
+    color: hsl(213, 96%, 18%);
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .bill-desc{
+    color: hsl(231, 11%, 63%);
+  }
+
+
+  .billIcon{
+    margin: 0 0 70px 0;
+   width: 100px;
+   height: 100px;
+  }
+ 
+
+
+  @media only screen and (max-width: 1024px) and (min-width: 730px) {
+
+    .Item  {
+      width: 34%;
+      font-size: 12px;
+      padding: 14px;
+
+    }
+
+    .bill-desc{
+      
+      padding: 12px;
+
+    }
+    
+    .bill-Discount{
+      font-size: 10px;
+      font-weight: bold;
+    }
+  
+  
+    .billIcon{
+      margin: 0 0 30px 0;
+     width: 40px;
+     height: 40px;
+    }
+  }
+    
+
+
+  @media only screen and (max-width: 729px) and (min-width: 320px) {
+
+   
+    .Item  {
+      height: 100px;
+      width: 90%;
+      font-size: 20px;
+      padding: 14px;
+display: flex;
+flex-direction: column;
+text-align: center;
+    }
+
+    
+  
+  
+    .billIcon{
+      margin: 10px 40px 0 40px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .Item input{
+      position: absolute;
+      left: 20px;
+      top: 40px;
+    }
+    .billItem-content{
+      position: absolute;
+      top: 10px;
+      right: 120px;
+    }
+
+   
+    }

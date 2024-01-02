@@ -1,0 +1,64 @@
+.FinishingUp{
+    background-color: hsl(205, 100%, 98%);
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 12px;
+  }
+  .userInfo{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+  
+  }
+  .selected{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    border-radius: 9px;
+    font-weight: bolder;
+  
+  
+  }
+  
+  
+  .selected h2{
+    margin: 12px 15px 42px 0 ;
+  }
+  .selected p{
+  padding: 10px;
+  border: 1px solid transparent;
+    height: 50px;
+    color: hsl(231, 11%, 63%);
+    font-weight: normal;
+  }
+
+
+
+  @media only screen and (max-width: 1024px) and (min-width: 730px){
+    .FinishingUp{
+      
+      padding: 20px 0px;
+     
+    }
+
+    .userInfo{
+      font-size: 10px;
+      font-weight: bolder;
+    
+    }
+
+    .selected h2{
+      font-size: 18px;
+    }
+  
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    
+    
+  }
+  @media only screen and (max-width: 480px) {
+    
+    
+  }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&family=Varela+Round&family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ============================================================================================================================================= -->
+    <title>Simple Paswword Generator</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="pass-window">
+            <h3 class="pass-window-title">Generate a Strong Passsword!</h3>
+
+            <div class="display">
+
+
+                <input type="text" id="password" placeholder="Click the button to generate a password">
+                <i onclick="CopyPassword()" class="fa-solid fa-copy fa-2x" style="color: #ff6700;"></i>
+
+
+            </div> <!-- ./display -->
+
+
+            <button onclick="generatePassword()" class="generate-btn"> generate password</button>
+
+        </div> <!-- ./pass-window -->
+
+    </div> <!-- ./container-->
+
+    <!--=================================================================================================================================================== -->
+
+    <script>
+        const passwordBox = document.getElementById("password");
+        const length = 16; //passwordLength
+
+
+        /*
+        1. It selects a random character from each of the character sets (uppercase letters, lowercase letters, numbers, and symbols).
+        2. Appends them to the password string. 
+        3. Strong Feature For The Password Is ensured (The Generated Password contains at least one character from each of these categories).
+        
+        */
+
+        const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+        const numbers = "0123456789";
+        const symbols = "~!@#$%^&*()+_-<>/{}[\]|";
+
+        const FullPass = upperCase + lowerCase + numbers + symbols; // PasswordContent
+
+        //Will be called when the user clicks a button.
+
+        function generatePassword() {
+            let password = "";
+            // Generate the first part of the password with specific characters
+            password += upperCase[Math.floor(Math.random() * upperCase.length)];
+            password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+            password += numbers[Math.floor(Math.random() * numbers.length)];
+            password += symbols[Math.floor(Math.random() * symbols.length)];
+
+            //Will continue until the length of the password(genrated) string is equal to or less than the desired length.
+
+            while (password.length < length) {
+                password += FullPass[Math.floor(Math.random() * FullPass.length)];
+
+                /*
+                
+                    1. Select Random Decimal Number (0-1).
+                    2. Multiply it by the length og the string.
+                    3. rounds the result down to the nearest whole number.
+                    4. Finally : It will generate a random index within the valid range of indices.
+                */
+            }
+
+            passwordBox.value = password; // Get The Generated Password To Put It On The Screen(Input Feild) ==> By It's ID
+        }
+
+
+        function CopyPassword() {
+            passwordBox.select();
+            document.execCommand("copy");
+
+            //passwordBox.value = ""; // Clear the input field
+        }
+
+    </script>
+
+</body>
+
+</html>

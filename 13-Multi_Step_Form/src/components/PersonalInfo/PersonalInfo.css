@@ -1,0 +1,63 @@
+
+.personalInfo{
+    display: flex;
+    flex-direction: column;
+    color: hsl(213, 96%, 18%);
+    font-size: 20px;
+    
+  }
+ 
+  .personalInfo input, 
+  .personalInfo input :checked{
+    height: 50px;
+    margin: 3px 0 20px 0;
+    padding: 15px;
+    border-radius: 9px;
+    font-size: 17px;
+    font-weight: 500;
+    color: hsl(231, 11%, 63%);
+  border: 0.5px solid  hsl(227, 18%, 90%);
+  box-shadow: 0px 0px 1px 1px hsl(227, 18%, 90%);
+  }
+  
+
+  /* @media only screen and (max-width: 750px) {
+    .personalInfo{
+    
+      font-size: 15px;
+      
+    }
+      }
+
+      @media only screen and (max-width: 636px) {
+        .personalInfo input{
+height: 20px;
+width: 220px;
+
+        }
+          }
+
+
+
+  @media only screen and (max-width: 600px) {
+    .personalInfo input{
+      width: 100%;
+      
+              }
+
+            } */
+
+
+            @media only screen and (max-width: 1024px) and (min-width: 730px) {
+ 
+            }
+            
+            
+            @media only screen and (max-width: 768px) {
+              
+              
+            }
+            @media only screen and (max-width: 480px) {
+              
+              
+            }

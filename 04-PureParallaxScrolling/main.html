@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Parallax Effect | Pure CSS</title>
+
+<style>
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.parallax_wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+}
+
+.intro_screen{
+    height: 100vh;
+    background-image: url('./images/image1.png');
+}
+
+
+.outro_screen{
+    height: 100vh;
+    background-image: url('./images/image4.png');
+}
+
+
+.parallax_group{
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.parallax_layer{
+    position: absolute;
+    inset: 0;
+}
+
+.base_layer{
+    transform: translateZ(-300px) scale(2);
+}
+
+.mid_layer{
+    transform: translateZ(0);
+}
+
+.top_layer{
+    transform: translateZ(210px) scale(0.3);
+}
+
+#intro{
+    z-index: 0;
+}
+
+#group1{
+    z-index: -1;
+}
+
+#group1 >.base_layer{
+    background-image: url('./images/image2.png');
+}
+
+
+#group2 >.mid_layer{
+    background-image: url('./images/image3.png');
+}
+</style>
+
+    </head>
+    <body>
+    <div class="parallax_wrapper">
+
+        <div class="parallax_group intro_screen" id="intro"></div>
+
+        <div class="parallax_group" id="group1">
+
+<div class="parallax_layer base_layer"></div>
+
+<div class="parallax_layer mid_layer"></div>
+
+        </div>
+
+
+        <div class="parallax_group" id="group2">
+
+            <div class="parallax_layer mid_layer"></div>
+            
+            <div class="parallax_layer top_layer"></div>
+            
+                    </div>
+
+                    <div class="parallax_group outro_screen" id="outro"></div>
+    </div>
+
+
+    </body>
+</html>
